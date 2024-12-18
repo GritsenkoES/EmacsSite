@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Inter';
+  src: url("../fonts/Inter_18pt-Regular.ttf");
+}
+
+div.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1353px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.header_logo {
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 187px;
+  margin-top: 45px;
+}
+
+div.header_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 528px;
+  margin-top: 51px;
+  font-family: 'Inter', serif;
+  font-size: 16px;
+
+}
+
+div.dropbtn {
+  background-color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 19px;
+}
+
+div.header_catalog {
+  padding-bottom: 3px;
+}
+
+.header_catalog:hover {
+  padding-bottom: 1px;
+  border-bottom: 2px solid #2152FF;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Inter', serif;
+}
+
+.dropdown-content {
+  padding-top: 6px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  display: none;
+  position: absolute;
+  background-color: #2152FF;
+  border-radius: 10px;
+  min-width: 444px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  margin: 0;
+  color: white;
+  padding-top: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+div.menu_cert a {
+  padding-bottom: 3px;
+  text-decoration: none;
+  color: black;
+}
+
+div.menu_cert a:hover {
+  border-bottom: 2px solid #2152FF;
+}
+
+div.phone {
+  font-family: 'Inter', serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 160px;
+  margin-top: 45px;
+}
+
+div.number a {
+  text-decoration: none;
+  color: black;
+}
+
+div.working_time {
+  font-size: 10px;
+}
+
+div.call {
+  height: 39px;
+  width: 149px;
+  background: #2152FF;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Inter', serif;
+  margin-top: 45px;
+}
+
+div.call:hover {
+  background: #1939AB;
+}
+
+div.call a {
+  text-decoration: none;
+  color: white;
+}
+
+.under_header_line {
+  border: none; /* Убираем границу */
+  margin: 0;
+  background-color: #D8D8D8; /* Цвет линии */
+  color: #D8D8D8; /* Цвет линии для IE6-7 */
+  height: 1px; /* Толщина линии */
+}
