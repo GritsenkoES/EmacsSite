@@ -282,7 +282,9 @@
   background-repeat: no-repeat;
   border-radius: 10px;
 }
-
+.our_works_main_image_item{
+  margin-right: 1rem;
+}
 .our_works_right {
   margin-top: 36px;
   display: flex;
@@ -326,7 +328,7 @@
   width: 480px;
   height: 130px;
   margin-bottom: 42px;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .our_works_buttons {
@@ -345,12 +347,18 @@
 
 .our_works_button_left {
   background: url("../../../../public/img/left_arrow.svg") center no-repeat;
+  cursor: pointer;
 }
-
+.our_works_button_left:hover{
+  opacity: 0.7;
+}
 .our_works_button_right {
   background: url("../../../../public/img/right_arrow.svg") center no-repeat;
+  cursor: pointer;
 }
-
+.our_works_button_right:hover{
+  opacity: 0.7;
+}
 .our_works_more {
   width: 130px;
   height: 44px;
@@ -375,7 +383,7 @@ div.title_text {
   font-family: Inter, serif;
 }
 
-div.advantages_blocks {
+.advantages_blocks {
   width: 1353px;
   margin-left: auto;
   margin-right: auto;
@@ -384,7 +392,7 @@ div.advantages_blocks {
   justify-content: space-between;
 }
 
-div.advantages_block {
+.advantages_block {
   width: 434px;
   height: 205px;
   border: #2152FF solid 1px;
@@ -392,24 +400,28 @@ div.advantages_block {
   margin-bottom: 25px;
   padding-top: 15px;
   padding-left: 17px;
+  transition: all 0.5s ease-in-out;
 }
-
-div.advantages_text_1 {
+.active_block{
+  background: #2152FF;
+  color: white;
+}
+.advantages_text_1 {
   font-size: 40px;
   font-weight: 600;
   font-family: Inter, serif;
   margin-bottom: 40px;
 }
 
-div.advantages_text_2 {
+.advantages_text_2 {
   font-size: 24px;
   font-weight: 400;
   font-family: Inter, serif;
 }
 
-/*Digits*/
 
-div.digits_blocks {
+
+.digits_blocks {
   width: 1353px;
   margin-left: auto;
   margin-right: auto;
@@ -419,7 +431,7 @@ div.digits_blocks {
   margin-bottom: 160px;
 }
 
-div.digits_short_block {
+.digits_short_block {
   width: 544px;
   height: 241px;
   border-radius: 10px;
@@ -428,7 +440,7 @@ div.digits_short_block {
   padding-left: 20px;
 }
 
-div.digits_wide_block {
+.digits_wide_block {
   width: 792px;
   height: 241px;
   border-radius: 10px;
@@ -437,22 +449,22 @@ div.digits_wide_block {
   padding-left: 20px;
 }
 
-div.digits_text_1 {
+.digits_text_1 {
   font-size: 136px;
   font-weight: 800;
   color: white;
   font-family: Inter, serif;
 }
 
-div.digits_text_2 {
+.digits_text_2 {
   font-size: 27px;
   font-weight: 400;
   color: white;
   font-family: Inter, serif;
 }
 
-/*Discount*/
-div.discount {
+
+.discount {
   width: 1353px;
   height: 331px;
   margin-left: auto;
@@ -466,7 +478,7 @@ div.discount {
   margin-bottom: 160px;
 }
 
-div.discount_left {
+.discount_left {
   display: flex;
   flex-wrap: wrap;
   margin-top: 62px;
@@ -483,26 +495,24 @@ div.discount_left {
 }
 
 .discount_text_1 {
-
   font-size: 122px;
   font-weight: 700;
 }
 
 .discount_text_2 {
   font-size: 16px;
-
 }
 
 .discount_text_3 {
   font-size: 24px;
 }
 
-div.discount_right {
+.discount_right {
   margin-top: 46px;
   margin-right: 88px;
 }
 
-div.discount_form_1 {
+.discount_form_1 {
   width: 513px;
   height: 60px;
   background: white;
@@ -512,7 +522,7 @@ div.discount_form_1 {
   margin-bottom: 14px;
 }
 
-div.discount_form_2 {
+.discount_form_2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,27 +534,27 @@ div.discount_form_2 {
   margin-bottom: 14px;
 }
 
-div.discount_form_2:hover {
+.discount_form_2:hover {
   background: #2152FF;
 }
 
-div.discount_form_2 a {
+.discount_form_2 a {
   text-decoration: none;
   color: white;
 }
 
 
-div.discount_text_4 {
+.discount_text_4 {
   font-size: 15px;
   color: #787878;
 }
 
-div.discount_text_5 {
+.discount_text_5 {
   font-size: 20px;
 }
 
-/*Contacts*/
-div.contacts {
+
+.contacts {
   width: 1353px;
   height: 355px;
   margin-left: auto;
@@ -579,7 +589,7 @@ div.contacts_block {
   color: black;
 }
 
-div.contacts_phone_email {
+.contacts_phone_email {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -590,10 +600,10 @@ div.contacts_phone_email {
   align-self: flex-end;
 }
 
-div.contacts_phone_email a {
+.contacts_phone_email a {
   color: black;
 }
 
-div.contacts_phone a {
+.contacts_phone a {
   text-decoration: none;
 }

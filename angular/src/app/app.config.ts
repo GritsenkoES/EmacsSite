@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import {provideAngularSvgIcon} from 'angular-svg-icon';
 import {provideHttpClient} from '@angular/common/http';
 
+
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }),
     provideAngularSvgIcon(),

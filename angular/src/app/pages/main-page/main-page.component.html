@@ -104,32 +104,21 @@
   <div class="our_works_main_image"></div>
   <div class="our_works_right">
     <div class="our_works_text_h1">
-      Главный распределительный щит
+      Главные распределительные щиты
     </div>
     <div class="our_works_description">
       <div class="our_works_text_h2">
-        Главный распределительный щит для объекта Строительство здания общеобразовательной школы по адресу: Лиственная
-        ул., участок № 1, (территория, ограниченная Северным пр., ул. Есенина, проектируемой улицей № 2, Лиственной
-        ул.,
-        ул. Жака Дюкло, проектируемой пешеходной улицей, проектируемой улицей № 1; ФЗУ № 20) (1000 мест).
+        {{currentOurWork?.title}}
       </div>
       <div class="our_works_contur">
         <div class="our_works_second_images">
-          <div>
-            <img ngSrc="img/grshc_image_1.png" width="143" height="131" alt="">
+          <div *ngFor="let item of currentOurWork?.imagesSrc" class="our_works_main_image_item">
+            <img ngSrc="{{item}}" width="143" height="131" alt="">
           </div>
-          <div>
-            <img ngSrc="img/grshc_image_2.png" width="143" height="131" alt="">
-          </div>
-          <div>
-            <img ngSrc="img/grshc_image_3.png" width="143" height="131" alt="">
-          </div>
-          <div></div>
-          <div></div>
         </div>
         <div class="our_works_buttons">
-          <div class="our_works_button our_works_button_left"></div>
-          <div class="our_works_button our_works_button_right"></div>
+          <div class="our_works_button our_works_button_left" (click)="clickLeft()"></div>
+          <div class="our_works_button our_works_button_right" (click)="clickRight()"></div>
         </div>
       </div>
     </div>
@@ -142,39 +131,38 @@
 <!--Преимущества-->
 <div class="title_text">ПРЕИМУЩЕСТВА</div>
 <div class="advantages_blocks">
-  <div class="advantages_block">
+  <div class="advantages_block" [ngClass]="{active_block:currentDiv===1}">
     <div class="advantages_text_1">01</div>
     <div class="advantages_text_2">Сертифицированная</div>
     <div class="advantages_text_2">продукция</div>
   </div>
-  <div class="advantages_block">
+  <div class="advantages_block"  [ngClass]="{active_block:currentDiv===2}">
     <div class="advantages_text_1">02</div>
     <div class="advantages_text_2">Гарантия на оборудование</div>
     <div class="advantages_text_2"> от 2-х лет</div>
   </div>
-  <div class="advantages_block">
+  <div class="advantages_block"  [ngClass]="{active_block:currentDiv===3}">
     <div class="advantages_text_1">03</div>
     <div class="advantages_text_2">Профессиональная</div>
     <div class="advantages_text_2">команда</div>
   </div>
-  <div class="advantages_block">
+  <div class="advantages_block"  [ngClass]="{active_block:currentDiv===4}">
     <div class="advantages_text_1">04</div>
     <div class="advantages_text_2">Проверка лабораторным</div>
     <div class="advantages_text_2">оборудованием для выявления</div>
     <div class="advantages_text_2">брака</div>
   </div>
-  <div class="advantages_block">
+  <div class="advantages_block"  [ngClass]="{active_block:currentDiv===5}">
     <div class="advantages_text_1">05</div>
     <div class="advantages_text_2">Использование</div>
     <div class="advantages_text_2">передовых</div>
     <div class="advantages_text_2">технологий</div>
   </div>
-  <div class="advantages_block">
+  <div class="advantages_block"  [ngClass]="{active_block:currentDiv===6}">
     <div class="advantages_text_1">06</div>
     <div class="advantages_text_2">Выгодное соотношение</div>
     <div class="advantages_text_2">стоимости и качества</div>
   </div>
-
 </div>
 
 <!--Компания в цифрах-->
@@ -251,6 +239,7 @@
       </div>
     </div>
   </div>
-  <div class="map"></div>
-
+  <div class="map">
+    <app-ymaps></app-ymaps>
+  </div>
 </div>
