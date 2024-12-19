@@ -1,0 +1,140 @@
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Inter';
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 130px;
+  align-items: center;
+  white-space:nowrap;
+}
+
+.header_logo {
+  height: 40px;
+  width: 187px;
+}
+
+.header_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 528px;
+  font-size: 16px;
+}
+
+.dropbtn {
+  background-color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.header_catalog {
+  padding-bottom: 3px;
+}
+
+.header_catalog:hover {
+  padding-bottom: 1px;
+  border-bottom: 2px solid #2152FF;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Inter', serif;
+}
+
+.dropdown-content {
+  padding-top: 6px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  display: none;
+  position: absolute;
+  background-color: #2152FF;
+  border-radius: 10px;
+  min-width: 444px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  margin: 0;
+  color: white;
+  padding-top: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+.menu_cert a {
+  padding-bottom: 3px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu_cert a:hover {
+  border-bottom: 2px solid #2152FF;
+}
+
+.phone {
+  font-family: 'Inter', serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 160px;
+}
+
+.number a {
+  text-decoration: none;
+  color: black;
+}
+
+.working_time {
+  font-size: 10px;
+}
+
+.call {
+  height: 39px;
+  width: 149px;
+  background: #2152FF;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Inter', serif;
+}
+
+div.call:hover {
+  background: #1939AB;
+}
+
+div.call a {
+  text-decoration: none;
+  color: white;
+}
+
+.under_header_line {
+  border: none; /* Убираем границу */
+  margin: 0;
+  background-color: #D8D8D8; /* Цвет линии */
+  color: #D8D8D8; /* Цвет линии для IE6-7 */
+  height: 1px; /* Толщина линии */
+}
