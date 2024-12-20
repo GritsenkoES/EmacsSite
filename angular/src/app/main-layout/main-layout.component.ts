@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '../components/header/header.component';
 import {FooterComponent} from '../components/footer/footer.component';
+import {filter} from 'rxjs';
+import {BackButtonComponent} from '../components/back-button/back-button.component';
+import {NgIf} from '@angular/common';
 
 
 @Component({
@@ -10,12 +13,27 @@ import {FooterComponent} from '../components/footer/footer.component';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BackButtonComponent,
+    NgIf
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss'
 })
-export class MainLayoutComponent{
+export class MainLayoutComponent implements OnInit {
+  showBackButton = false;
+  constructor(private router: Router) {
+  }
 
-
+  ngOnInit(): void {
+    this.showBackButtonFn()
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(_ => {
+        this.showBackButtonFn()
+      })
+  }
+  showBackButtonFn(){
+    const url: string[] = this.router.url.split('/');
+    this.showBackButton = url[0] !== "" || url[1] !== "";
+  }
 }

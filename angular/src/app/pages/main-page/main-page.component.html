@@ -100,34 +100,7 @@
     </div>
   </div>
 </div>
-<div class="our_works">
-  <div class="our_works_main_image"></div>
-  <div class="our_works_right">
-    <div class="our_works_text_h1">
-      Главные распределительные щиты
-    </div>
-    <div class="our_works_description">
-      <div class="our_works_text_h2">
-        {{currentOurWork?.title}}
-      </div>
-      <div class="our_works_contur">
-        <div class="our_works_second_images">
-          <div *ngFor="let item of currentOurWork?.imagesSrc" class="our_works_main_image_item">
-            <img ngSrc="{{item}}" width="143" height="131" alt="">
-          </div>
-        </div>
-        <div class="our_works_buttons">
-          <div class="our_works_button our_works_button_left" (click)="clickLeft()"></div>
-          <div class="our_works_button our_works_button_right" (click)="clickRight()"></div>
-        </div>
-      </div>
-    </div>
-    <div class="our_works_more buttons">
-      <a href="#">Подробнее</a>
-    </div>
-  </div>
-</div>
-
+<app-our-works></app-our-works>
 <!--Преимущества-->
 <div class="title_text">ПРЕИМУЩЕСТВА</div>
 <div class="advantages_blocks">

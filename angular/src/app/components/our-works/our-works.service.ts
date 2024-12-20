@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {OurWorks, OurWorksContent} from './types';
+import {OurWorks, OurWorksContent} from '../../pages/main-page/types';
 import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MainPageService {
+export class OurWorksService {
 
   constructor() { }
 
