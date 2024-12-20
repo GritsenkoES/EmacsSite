@@ -5,20 +5,7 @@
   margin: 80px auto 150px;
   justify-content: space-between;
 }
-.buttons {
-  background: #2152FF;
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'Inter', serif;
-  height: 56px;
-  width: 226px;
-  font-size: 20px;
 
-}
 .description_text {
   width: 822px;
 }
@@ -77,32 +64,10 @@
   background-image: url("../../../../public/img/description_image.jpg");
   background-repeat: no-repeat;
 }
-
-.title {
-  display: flex;
-  flex-wrap: wrap;
-  height: 56px;
-  justify-content: space-between;
-  font-family: Inter, serif;
-  font-size: 39px;
-  font-weight: 600;
-  margin: 60px auto 51px;
-}
-
 .main_go_catalog {
   font-weight: 400;
   font-family: 'Inter', serif;
 }
-
-.main_go_catalog:hover {
-  background: #1939AB;
-}
-
-.main_go_catalog a {
-  text-decoration: none;
-  color: white;
-}
-
 .main_catalog_images {
   display: flex;
   flex-wrap: wrap;
@@ -252,7 +217,6 @@
   color: white;
 }
 
-
 .call_us_pers {
   margin-top: 26px;
   color: white;
@@ -260,9 +224,6 @@
   font-family: 'Inter', serif;
 }
 
-.our_works_head {
-  width: 288px;
-}
 /*Advantages*/
 div.title_text {
   width: 1353px;

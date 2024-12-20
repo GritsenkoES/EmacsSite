@@ -16,7 +16,7 @@ import {OurWorksComponent} from '../../components/our-works/our-works.component'
     OurWorksComponent
   ],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
+  styleUrls: ['./main-page.component.scss','../../commons/styles/buttons.scss','../../commons/styles/title.scss'],
 })
 export class MainPageComponent{
 

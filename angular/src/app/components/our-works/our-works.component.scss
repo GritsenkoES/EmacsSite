@@ -1,4 +1,18 @@
-
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1353px;
+  height: 56px;
+  justify-content: space-between;
+  font-family: Inter, serif;
+  font-size: 39px;
+  font-weight: 600;
+  margin: 60px auto 51px;
+}
+.main_go_catalog {
+  font-weight: 400;
+  font-family: 'Inter', serif;
+}
 .our_works {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +22,9 @@
   margin-right: auto;
   margin-left: auto;
 }
-
+.our_works_head {
+  width: 320px;
+}
 .our_works_main_image {
   width: 437px;
   height: 459px;
