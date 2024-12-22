@@ -1,10 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {NgClass, NgForOf, NgOptimizedImage} from '@angular/common';
+import {Component} from '@angular/core';
+import {NgClass, NgOptimizedImage} from '@angular/common';
 import {YMapsComponent} from './ymaps/ymaps.component';
 import {interval} from 'rxjs';
-import {OurWorksService} from '../../components/our-works/our-works.service';
-import {OurWorks, OurWorksContent} from './types';
 import {OurWorksComponent} from '../../components/our-works/our-works.component';
+import {DiscountComponent} from '../../components/discount/discount.component';
 
 @Component({
   selector: 'app-main-page',
@@ -13,7 +12,8 @@ import {OurWorksComponent} from '../../components/our-works/our-works.component'
     NgOptimizedImage,
     YMapsComponent,
     NgClass,
-    OurWorksComponent
+    OurWorksComponent,
+    DiscountComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss','../../commons/styles/buttons.scss','../../commons/styles/title.scss'],

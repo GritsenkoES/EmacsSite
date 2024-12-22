@@ -28,7 +28,7 @@
   width: 621px;
   height: 39px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .description_rect {
@@ -41,8 +41,6 @@
   font-family: Inter, serif;
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: auto;
-  margin-top: auto;
 }
 
 .description_call {
@@ -70,7 +68,7 @@
 }
 .main_catalog_images {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   height: 520px;
   margin-left: auto;
   margin-right: auto;
@@ -128,7 +126,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1352px;
   height: 265px;
   background-image: url("../../../../public/img/call_us.png");
   background-repeat: no-repeat;
@@ -225,8 +222,7 @@
 }
 
 /*Advantages*/
-div.title_text {
-  width: 1353px;
+.title_text {
   font-size: 39px;
   font-weight: 600;
   margin: 60px auto 40px;
@@ -234,16 +230,13 @@ div.title_text {
 }
 
 .advantages_blocks {
-  width: 1353px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .advantages_block {
-  width: 434px;
+  width: 400px;
   height: 205px;
   border: #2152FF solid 1px;
   border-radius: 10px;
@@ -272,11 +265,10 @@ div.title_text {
 
 
 .digits_blocks {
-  width: 1353px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 160px;
 }
@@ -314,101 +306,8 @@ div.title_text {
 }
 
 
-.discount {
-  width: 1353px;
-  height: 331px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background: #1939AB;
-  border-radius: 10px;
-  padding-left: 70px;
-  margin-bottom: 160px;
-}
-
-.discount_left {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 62px;
-}
-
-.discount_block2 {
-  margin-top: 24px;
-}
-
-.discount_text {
-  color: white;
-  font-family: Inter, serif;
-  font-weight: 400;
-}
-
-.discount_text_1 {
-  font-size: 122px;
-  font-weight: 700;
-}
-
-.discount_text_2 {
-  font-size: 16px;
-}
-
-.discount_text_3 {
-  font-size: 24px;
-}
-
-.discount_right {
-  margin-top: 46px;
-  margin-right: 88px;
-}
-
-.discount_form_1 {
-  width: 513px;
-  height: 60px;
-  background: white;
-  border-radius: 10px;
-  align-content: center;
-  padding-left: 31px;
-  margin-bottom: 14px;
-}
-
-.discount_form_2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 513px;
-  height: 60px;
-  border: #D8D8D8 solid 1px;
-  border-radius: 10px;
-  padding-left: 31px;
-  margin-bottom: 14px;
-}
-
-.discount_form_2:hover {
-  background: #2152FF;
-}
-
-.discount_form_2 a {
-  text-decoration: none;
-  color: white;
-}
-
-
-.discount_text_4 {
-  font-size: 15px;
-  color: #787878;
-}
-
-.discount_text_5 {
-  font-size: 20px;
-}
-
-
 .contacts {
-  width: 1353px;
   height: 355px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -11,7 +11,7 @@ import {NgForOf, NgOptimizedImage} from '@angular/common';
   ],
   templateUrl: './our-works.component.html',
   standalone: true,
-  styleUrls: ['./our-works.component.scss','../../commons/styles/buttons.scss']
+  styleUrls: ['./our-works.component.scss','../../commons/styles/buttons.scss','../../commons/styles/title.scss']
 })
 export class OurWorksComponent implements OnInit{
   ourWorks:OurWorksContent = {content:[]}

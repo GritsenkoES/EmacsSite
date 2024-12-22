@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {OurWorks, OurWorksContent} from '../../pages/main-page/types';
 import {Observable, of} from 'rxjs';
 

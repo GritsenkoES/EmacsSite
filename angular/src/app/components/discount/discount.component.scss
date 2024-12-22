@@ -1,0 +1,86 @@
+.discount {
+  height: 331px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #1939AB;
+  border-radius: 10px;
+  padding-left: 70px;
+  margin-bottom: 160px;
+}
+
+.discount_left {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 62px;
+}
+
+.discount_block2 {
+  margin-top: 24px;
+}
+
+.discount_text {
+  color: white;
+  font-family: Inter, serif;
+  font-weight: 400;
+}
+
+.discount_text_1 {
+  font-size: 122px;
+  font-weight: 700;
+}
+
+.discount_text_2 {
+  font-size: 16px;
+}
+
+.discount_text_3 {
+  font-size: 24px;
+}
+
+.discount_right {
+  margin-top: 46px;
+  margin-right: 88px;
+  color: white;
+}
+
+.discount_form_1 {
+  width: 513px;
+  height: 60px;
+  background: white;
+  border-radius: 10px;
+  align-content: center;
+  padding-left: 31px;
+  margin-bottom: 14px;
+}
+
+.discount_form_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 513px;
+  height: 60px;
+  border: #D8D8D8 solid 1px;
+  border-radius: 10px;
+  padding-left: 31px;
+  margin-bottom: 14px;
+}
+
+.discount_form_2:hover {
+  background: #2152FF;
+}
+
+.discount_form_2 a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.discount_text_4 {
+  font-size: 15px;
+  color: #787878;
+}
+
+.discount_text_5 {
+  font-size: 20px;
+}

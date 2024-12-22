@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {SvgIconComponent} from 'angular-svg-icon';
 import {RouterLink} from '@angular/router';
 

@@ -1,0 +1,10 @@
+<div class="catalog_description_images">
+  <div class="big_image">
+    <img ngSrc="{{fullImageUrl()[bigImageUrl]}}" width="100%" height="660" alt="">
+  </div>
+  <div class="images_list">
+    <div *ngFor="let image of fullImageUrl()">
+      <img ngSrc="{{image}}" width="305" height="200" alt="">
+    </div>
+  </div>
+</div>
