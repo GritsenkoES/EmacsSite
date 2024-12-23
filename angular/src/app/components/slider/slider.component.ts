@@ -4,11 +4,12 @@ import {interval} from 'rxjs';
 
 @Component({
   selector: 'app-slider',
-    imports: [
-        NgForOf,
-        NgOptimizedImage
-    ],
+  imports: [
+    NgForOf,
+    NgOptimizedImage
+  ],
   templateUrl: './slider.component.html',
+  standalone: true,
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
