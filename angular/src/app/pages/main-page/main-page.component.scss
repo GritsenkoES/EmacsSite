@@ -70,14 +70,12 @@
   display: flex;
   flex-wrap: nowrap;
   height: 520px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 160px;
   justify-content: space-between;
 }
 
 .main_catalog_brd {
-  width: 437px;
+  max-width: 437px;
   height: 535px;
   border-radius: 12px;
   border: #D8D8D8 1px solid;
@@ -265,16 +263,15 @@
 
 
 .digits_blocks {
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 160px;
+}
+.digits_blocks-row{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-bottom: 160px;
 }
-
 .digits_short_block {
-  width: 544px;
+  width: 38%;
   height: 241px;
   border-radius: 10px;
   margin-bottom: 14px;
@@ -283,7 +280,7 @@
 }
 
 .digits_wide_block {
-  width: 792px;
+  width: 60%;
   height: 241px;
   border-radius: 10px;
   margin-bottom: 14px;

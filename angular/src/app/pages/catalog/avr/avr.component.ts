@@ -13,7 +13,7 @@ import {SliderComponent} from '../../../components/slider/slider.component';
   ],
   templateUrl: './avr.component.html',
   standalone: true,
-  styleUrls:[ './avr.component.scss','../../../commons/styles/buttons.scss']
+  styleUrls:[ './avr.component.scss','../../../commons/styles/buttons.scss','../../../commons/styles/catalog.scss','../../../commons/styles/title.scss'],
 })
 export class AvrComponent implements OnInit{
 

@@ -8,3 +8,12 @@
   font-weight: 600;
   margin: 60px auto 51px;
 }
+.order_title {
+  display: flex;
+  flex-wrap: wrap;
+  height: 96px;
+  justify-content: space-between;
+  font-family: Inter, serif;
+  font-size: 39px;
+  font-weight: 600;
+}

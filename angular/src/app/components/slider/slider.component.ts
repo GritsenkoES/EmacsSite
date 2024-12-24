@@ -18,11 +18,13 @@ export class SliderComponent {
   constructor() {
     interval(3000).subscribe({
       next: () => {
-        if(this.bigImageUrl===this.fullImageUrl.length-1){
+        if(this.bigImageUrl===this.fullImageUrl().length-1){
           this.bigImageUrl=0
-          return
+          console.log(this.bigImageUrl)
+        }else {
+          this.bigImageUrl=this.bigImageUrl+1;
+          console.log(this.bigImageUrl)
         }
-        this.bigImageUrl=this.bigImageUrl+1;
       }}
     )
   }
