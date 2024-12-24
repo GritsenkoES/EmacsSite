@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 
 @Injectable({
@@ -8,8 +8,8 @@ export class GrschService {
 
   constructor() { }
   getImagesUrl():Observable<string[]>{
-    return of(chnoImages)
+    return of(grschImages)
   }
 
 }
-const chnoImages:string[]=['img/grsch1.jpg','img/grsch2.jpg','img/grsch3.jpg'];
+const grschImages:string[]=['img/grsch1.jpg','img/grsch2.jpg','img/grsch3.jpg'];

@@ -4,11 +4,12 @@ import {Observable, of} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AvrService {
+export class ItpService {
 
   constructor() { }
   getImagesUrl():Observable<string[]>{
-    return of(avrImages)
+    return of(itpImages)
   }
+
 }
-const avrImages:string[]=["img/avr1.jpg","img/avr_description_image2.png","img/avr_description_image3.png"]
+const itpImages:string[]=['img/itp1.jpg','img/itp2.jpg','img/itp3.jpg'];
