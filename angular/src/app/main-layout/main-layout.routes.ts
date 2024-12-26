@@ -6,6 +6,7 @@ import {ChnoComponent} from '../pages/catalog/chno/chno.component';
 import {GrschComponent} from '../pages/catalog/grsch/grsch.component';
 import {ItpComponent} from '../pages/catalog/itp/itp.component';
 import {UkrmComponent} from '../pages/catalog/ukrm/ukrm.component';
+import {VruComponent} from '../pages/catalog/vru/vru.component';
 
 export const MAIN_ROUTES: Routes = [
   {
@@ -17,7 +18,8 @@ export const MAIN_ROUTES: Routes = [
       {path:'catalog/schno',component:ChnoComponent},
       {path:'catalog/grsch',component:GrschComponent},
       {path:'catalog/itp',component:ItpComponent},
-      {path:'catalog/ukrm',component:UkrmComponent}
+      {path:'catalog/ukrm',component:UkrmComponent},
+      {path:'catalog/vru',component:VruComponent}
     ]
   }
 ]
