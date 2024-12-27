@@ -1,1 +1,12 @@
+<div class="order_title">
+  <div class="title_ukrm">{{currentCatalogItem?.title}}</div>
+  <div class="buttons main_go_catalog">
+    <div>
+      Оставить заявку
+    </div>
+  </div>
+</div>
+<app-slider *ngIf="currentCatalogItem&&currentCatalogItem.imageUrls" [fullImageUrl]="currentCatalogItem.imageUrls"></app-slider>
 <router-outlet></router-outlet>
+<app-our-works></app-our-works>
+<app-discount></app-discount>
