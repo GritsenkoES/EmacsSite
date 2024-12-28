@@ -1,28 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {OurWorksComponent} from '../../../components/our-works/our-works.component';
-import {AvrService} from './avr.service';
-import {DiscountComponent} from '../../../components/discount/discount.component';
-import {SliderComponent} from '../../../components/slider/slider.component';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-avr',
   imports: [
-    OurWorksComponent,
-    DiscountComponent,
-    SliderComponent
   ],
   templateUrl: './avr.component.html',
   standalone: true,
-  styleUrls:[ './avr.component.scss','../../../commons/styles/buttons.scss','../../../commons/styles/catalog.scss','../../../commons/styles/title.scss'],
+  styleUrls:[ '../../../commons/styles/catalog.scss'],
 })
-export class AvrComponent implements OnInit{
+export class AvrComponent{
 
-  fullImageUrl:string[]=[];
-  constructor(private avrService: AvrService) {
-  }
-  ngOnInit(): void {
-    this.avrService.getImagesUrl().subscribe({next:data=>{
-      this.fullImageUrl=data
-      }})
-  }
 }

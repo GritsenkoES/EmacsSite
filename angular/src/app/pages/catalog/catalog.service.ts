@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 
 @Injectable({
@@ -9,13 +9,13 @@ export class CatalogService {
 
   constructor() {
     this.urls = new Map<string, CatalogItem>();
-    this.urls.set('avr',{imageUrls:avrImages,title:''})
-    this.urls.set('chno',{imageUrls:chnoImages,title:''})
-    this.urls.set('grsch',{imageUrls:grschImages,title:''})
-    this.urls.set('itp',{imageUrls:itpImages,title:''})
-    this.urls.set('ukrm',{imageUrls:ukrmImages,title:''})
-    this.urls.set('vru',{imageUrls:vruImages,title:''})
-    this.urls.set('schun',{imageUrls:schunImages,title:''})
+    this.urls.set('avr',{imageUrls:avrImages,title:'АВТОМАТИЧЕСКИЙ ВВОД РЕЗЕРВА (АВР)'})
+    this.urls.set('schno',{imageUrls:schnoImages,title:'ЩИТЫ НАРУЖНЕГО ОСВЕЩЕНИЯ (ЩНО)'})
+    this.urls.set('grsch',{imageUrls:grschImages,title:'ГЛАВНЫЙ РАСПРЕДЕЛИТЕЛЬНЫЙ ЩИТ ТИПА ГРЩ'})
+    this.urls.set('itp',{imageUrls:itpImages,title:'ЩИТЫ ИТП'})
+    this.urls.set('ukrm',{imageUrls:ukrmImages,title:'УСТРОЙСТВА КОМПЕНСАЦИИ РЕАКТИВНОЙ МОЩНОСТИ (УКРМ)'})
+    this.urls.set('vru',{imageUrls:vruImages,title:'ВВОДНОЕ РАСПРЕДЕЛИТЕЛЬНОЕ УСТРОЙСТВО (ВРУ)'})
+    this.urls.set('schun',{imageUrls:schunImages,title:'ШКАФЫ УПРАВЛЕНИЯ НАСОСАМИ (ШУН)'})
   }
 
 
@@ -27,13 +27,13 @@ export class CatalogService {
     return of({title:'',imageUrls:[]})
   }
 }
-const avrImages:string[]=["img/avr1.jpg","img/avr_description_image2.png","img/avr_description_image3.png"]
-const chnoImages:string[]=['img/schno1.jpg','img/schno2.jpg','img/schno3.jpg'];
-const grschImages:string[]=['img/grsch1.jpg','img/grsch2.jpg','img/grsch3.jpg'];
-const itpImages:string[]=['img/itp1.jpg','img/itp2.jpg','img/itp3.jpg'];
-const ukrmImages:string[]=['img/ukrm1.jpg','img/ukrm2.jpg','img/ukrm3.jpg'];
-const vruImages:string[]=['img/vru1.jpg','img/vru2.jpg','img/vru3.jpg'];
-const schunImages:string[]=['img/schun1.jpg','img/schun2.jpg','img/schun3.jpg'];
+const avrImages:string[]=["img/catalog/avr/avr1.jpg","img/catalog/avr/avr_description_image2.png","img/catalog/avr/avr_description_image3.png"]
+const schnoImages:string[]=['img/catalog/schno/schno1.jpg','img/catalog/schno/schno2.jpg','img/catalog/schno/schno3.jpg'];
+const grschImages:string[]=['img/catalog/grsch/grsch1.jpg','img/catalog/grsch/grsch2.jpg','img/catalog/grsch/grsch3.jpg'];
+const itpImages:string[]=['img/catalog/itp/itp1.jpg','img/catalog/itp/itp2.jpg','img/catalog/itp/itp3.jpg'];
+const ukrmImages:string[]=['img/catalog/ukrm/ukrm1.jpg','img/catalog/ukrm/ukrm2.jpg','img/catalog/ukrm/ukrm3.jpg'];
+const vruImages:string[]=['img/catalog/vru/vru1.jpg','img/catalog/vru/vru2.jpg','img/catalog/vru/vru3.jpg'];
+const schunImages:string[]=['img/catalog/schun/schun1.jpg','img/catalog/schun/schun2.jpg','img/catalog/schun/schun3.jpg'];
 
 export interface CatalogItem{
   title:string;

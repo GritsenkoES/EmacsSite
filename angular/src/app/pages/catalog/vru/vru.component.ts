@@ -1,20 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {VruService} from './vru.service';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-vru',
   imports: [],
   templateUrl: './vru.component.html',
   standalone: true,
-  styleUrl: './vru.component.scss'
+  styleUrls: ['../../../commons/styles/catalog.scss']
 })
-export class VruComponent implements OnInit{
-  fullImageUrl:string[]=[];
-  constructor(private vruService: VruService) {
-  }
-  ngOnInit(): void {
-    this.vruService.getImagesUrl().subscribe({next:data=>{
-        this.fullImageUrl=data
-      }})
-  }
-}
+export class VruComponent{}

@@ -7,8 +7,6 @@ import {Component} from '@angular/core';
   ],
   templateUrl: './ukrm.component.html',
   standalone: true,
-  styleUrls: ['./ukrm.component.scss','../../../commons/styles/buttons.scss','../../../commons/styles/catalog.scss','../../../commons/styles/title.scss']
+  styleUrls: ['../../../commons/styles/catalog.scss']
 })
-export class UkrmComponent{
-
-}
+export class UkrmComponent{}

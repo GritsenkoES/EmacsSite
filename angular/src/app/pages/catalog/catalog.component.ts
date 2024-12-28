@@ -18,7 +18,7 @@ import {NgIf} from '@angular/common';
   ],
   templateUrl: './catalog.component.html',
   standalone: true,
-  styleUrl: './catalog.component.scss'
+  styleUrls: ['../../commons/styles/buttons.scss','../../commons/styles/catalog.scss','../../commons/styles/title.scss']
 })
 export class CatalogComponent implements OnInit{
   currentCatalogItem:CatalogItem|undefined

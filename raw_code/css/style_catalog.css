@@ -35,7 +35,7 @@ div.button_back_arrow {
 }
 
 /*Заказывайте напрямую*/
-div.order_title {
+div.catalog_title {
   display: flex;
   flex-wrap: wrap;
   width: 1353px;
@@ -353,7 +353,7 @@ div.avr_description_small_image2 {
   background: url("../img/avr_description_image3.jpg") center no-repeat;
 }
 
-.title_ukrm{
+.catalog_title_text{
   width: 794px;
 }
 

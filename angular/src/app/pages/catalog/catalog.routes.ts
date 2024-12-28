@@ -6,6 +6,7 @@ import {GrschComponent} from './grsch/grsch.component';
 import {ItpComponent} from './itp/itp.component';
 import {UkrmComponent} from './ukrm/ukrm.component';
 import {VruComponent} from './vru/vru.component';
+import {SchunComponent} from './schun/schun.component';
 
 
 export const CATALOG_ROUTES: Routes = [
@@ -18,7 +19,8 @@ export const CATALOG_ROUTES: Routes = [
       {path:'grsch',component:GrschComponent},
       {path:'itp',component:ItpComponent},
       {path:'ukrm',component:UkrmComponent},
-      {path:'vru',component:VruComponent}
+      {path:'vru',component:VruComponent},
+      {path:'schun',component:SchunComponent}
     ]
   }
 ]
