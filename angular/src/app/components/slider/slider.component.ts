@@ -1,12 +1,13 @@
 import {Component, input} from '@angular/core';
-import {NgForOf, NgOptimizedImage} from "@angular/common";
+import {NgClass, NgForOf, NgOptimizedImage} from "@angular/common";
 import {interval} from 'rxjs';
 
 @Component({
   selector: 'app-slider',
   imports: [
     NgForOf,
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgClass
   ],
   templateUrl: './slider.component.html',
   standalone: true,

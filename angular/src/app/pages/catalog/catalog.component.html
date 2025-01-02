@@ -1,6 +1,6 @@
 <div class="catalog_title">
   <div class="catalog_title_text">{{currentCatalogItem?.title}}</div>
-  <div class="buttons">
+  <div class="buttons" (click)="requestCallShow()">
     <div>
       Оставить заявку
     </div>
@@ -10,3 +10,4 @@
 <router-outlet></router-outlet>
 <app-our-works></app-our-works>
 <app-discount></app-discount>
+<app-call-us></app-call-us>

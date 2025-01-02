@@ -1,0 +1,18 @@
+<div *ngIf="messageService.messages.size>0" class="message_container">
+  <div *ngFor="let message of messageService.messages"
+       class="message"
+       [ngClass]="{info:message.alertType==='info',
+    warning:message.alertType==='warning',
+    success:message.alertType==='success',
+    danger:message.alertType==='danger'}">
+    <div class="icon">
+      <svg-icon src="{{getSvgPath(message)}}"></svg-icon>
+    </div>
+    <div>
+      {{ message.message }}
+    </div>
+    <div class="close" (click)="closeMessage(message)">
+      <svg-icon src="img/messages/close.svg"></svg-icon>
+    </div>
+  </div>
+</div>

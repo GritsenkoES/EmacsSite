@@ -1,0 +1,46 @@
+<app-modal>
+  <div class="container">
+    <div class="header">
+      <div class="title">Заказать звонок</div>
+      <div class="close_icon" (click)="closeModal()">
+        <svg-icon src="img/messages/close.svg" viewBox="0 0 16 16"></svg-icon>
+      </div>
+    </div>
+    <form [formGroup]="phoneForm">
+      <div class="input_elem">
+        <input
+          class="text-field__input"
+          placeholder="Ваше имя"
+          formControlName="name"
+        >
+      </div>
+      <div class="input_elem">
+        <input
+          class="text-field__input"
+          id="phone"
+          formControlName="phone"
+          ngxPhoneField
+          [ngxPhoneFieldParams]="phoneInputParams.phoneInputParams()"
+          [ngClass]="{error:(phoneValid===false)}"
+        >
+      </div>
+      <div class="input_elem">
+        <textarea
+          placeholder="Комментарий"
+          formControlName="comment"
+          class="text-field__input textarea"
+        ></textarea>
+      </div>
+      <div class="footer">
+        <div class="pers">
+          *Нажимая на кнопку, Вы соглашаетесь
+          <a>на обработку персональных данных</a>
+        </div>
+        <div class="buttons send">
+          Отправить
+        </div>
+      </div>
+    </form>
+  </div>
+</app-modal>
+

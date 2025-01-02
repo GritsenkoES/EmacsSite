@@ -8,7 +8,4 @@ import {Component} from '@angular/core';
   standalone: true,
   styleUrls:[ '../../../commons/styles/catalog.scss'],
 })
-export class ChnoComponent {
-
-
-}
+export class ChnoComponent {}

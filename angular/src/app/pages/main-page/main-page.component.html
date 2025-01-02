@@ -10,9 +10,9 @@
         Разработка проектной и конструкторской документации
       </div>
     </div>
-    <div class="buttons description_call">
+    <div class="buttons description_call" (click)="requestCallShow()">
       <div>
-        <a href="#">Заказать звонок</a>
+        Заказать звонок
       </div>
     </div>
   </div>
@@ -71,25 +71,7 @@
 </div>
 
 <!--Позвоните нам-->
-<div class="call_us">
-  <div class="call_us_texts">
-    <div class="call_us_text1">ПОЗВОНИТЕ НАМ</div>
-    <div class="call_us_text2">
-      <a href="tel:+78129516997">+7 (812) 951-69-97</a>
-    </div>
-    <div class="call_us_text3">Или оставьте заявку</div>
-    <div class="call_us_text4">перезвоним в течение 1 часа</div>
-  </div>
-  <div>
-    <div class="call_us_number_form1">
-      <div>Номер телефона</div>
-    </div>
-    <div class="call_us_number_form2">
-      <a href="#">Отправить</a>
-    </div>
-    <div class="call_us_pers">*Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных</div>
-  </div>
-</div>
+<app-call-us></app-call-us>
 
 <!--Наши работы-->
 <app-our-works></app-our-works>

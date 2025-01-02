@@ -5,6 +5,8 @@ import {FooterComponent} from '../components/footer/footer.component';
 import {filter} from 'rxjs';
 import {BackButtonComponent} from '../components/back-button/back-button.component';
 import {NgIf} from '@angular/common';
+import {MessageComponent} from '../components/messages/message.component';
+import {ModalContainerComponent} from '../components/modal/modal.container';
 
 
 @Component({
@@ -15,7 +17,9 @@ import {NgIf} from '@angular/common';
     HeaderComponent,
     FooterComponent,
     BackButtonComponent,
-    NgIf
+    NgIf,
+    MessageComponent,
+    ModalContainerComponent
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss'

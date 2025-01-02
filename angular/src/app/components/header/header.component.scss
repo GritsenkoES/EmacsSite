@@ -60,7 +60,7 @@
   background-color: #2152FF;
   border-radius: 10px;
   min-width: 444px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -121,16 +121,14 @@
   align-items: center;
   font-size: 16px;
   font-family: 'Inter', serif;
-}
-
-div.call:hover {
-  background: #1939AB;
-}
-
-div.call a {
-  text-decoration: none;
   color: white;
 }
+
+.call:hover {
+  background: #1939AB;
+  cursor: pointer;
+}
+
 
 .under_header_line {
   border: none; /* Убираем границу */

@@ -10,7 +10,14 @@
 .images_list{
   display: flex;
   flex-direction: column;
-  width: 310px;
+  width: 320px;
   margin-left: 1rem;
   justify-content: space-between;
+}
+.active{
+  box-sizing:content-box;
+  border-radius: 0.5rem;
+  padding: 2px;
+  border: 2px solid blue;
+  opacity: 0.7;
 }

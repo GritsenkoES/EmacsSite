@@ -1,0 +1,28 @@
+<div class="call_us">
+  <div class="call_us_texts">
+    <div class="call_us_text1">ПОЗВОНИТЕ НАМ</div>
+    <div class="call_us_text2">
+      <a href="tel:+78129516997">+7 (812) 951-69-97</a>
+    </div>
+    <div class="call_us_text3">Или оставьте заявку</div>
+    <div class="call_us_text4">перезвоним в течение 1 часа</div>
+  </div>
+  <div>
+    <div class="call_us_number_form1" [formGroup]="phoneForm">
+      <input
+        [disabled]="backRequestService.inputDisabled"
+        class="text-field__input"
+        type="tel"
+        id="phone"
+        formControlName="phone"
+        ngxPhoneField
+        [ngxPhoneFieldParams]="phoneInputParams.phoneInputParams()"
+        [ngClass]="{error:(phoneValid===false)}"
+      />
+    </div>
+    <div class="call_us_number_form2" (click)="handleSubmit()">
+      Отправить
+    </div>
+    <div class="call_us_pers">*Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных</div>
+  </div>
+</div>

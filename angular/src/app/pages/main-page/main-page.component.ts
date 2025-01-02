@@ -4,6 +4,9 @@ import {YMapsComponent} from './ymaps/ymaps.component';
 import {interval} from 'rxjs';
 import {OurWorksComponent} from '../../components/our-works/our-works.component';
 import {DiscountComponent} from '../../components/discount/discount.component';
+import {CallUsComponent} from '../../components/call-us/call-us.component';
+import {ModalService} from '../../components/modal/modal.service';
+import {CallRequestComponent} from '../../components/call-request/call-request.component';
 
 @Component({
   selector: 'app-main-page',
@@ -13,7 +16,8 @@ import {DiscountComponent} from '../../components/discount/discount.component';
     YMapsComponent,
     NgClass,
     OurWorksComponent,
-    DiscountComponent
+    DiscountComponent,
+    CallUsComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss','../../commons/styles/buttons.scss','../../commons/styles/title.scss'],
@@ -22,12 +26,16 @@ export class MainPageComponent{
 
   currentDiv: number = 1;
 
-  constructor() {
+  constructor(private modalService:ModalService) {
     interval(2000).subscribe({
         next: () => {
           this.currentDiv = this.currentDiv + 1
           if (this.currentDiv >6) {
             this.currentDiv=1}}}
     )
+  }
+
+  requestCallShow() {
+    this.modalService.open(CallRequestComponent)
   }
 }

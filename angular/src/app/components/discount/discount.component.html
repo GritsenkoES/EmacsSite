@@ -11,17 +11,22 @@
     </div>
   </div>
   <div class="discount_right">
-    <div class="discount_form_1">
-      <div class="discount_text discount_text_4">Ваше имя</div>
-    </div>
-    <div class="discount_form_1">
-      <div class="discount_text discount_text_4">Номер телефона</div>
-    </div>
-    <div class="discount_form_2">
+    <input type="text" class="text-field__input discount_form_1" placeholder="Ваше имя">
+    <input
+      [disabled]="backRequestService.inputDisabled"
+      class="text-field__input discount_form_1"
+      type="tel"
+      id="phone"
+      formControlName="phone"
+      ngxPhoneField
+      [ngxPhoneFieldParams]="phoneInputParams.phoneInputParams()"
+      [ngClass]="{error:(phoneValid===false)}"
+    />
+    <div class="discount_form_2" (click)="handleSubmit()">
       <div class="discount_text discount_text_5">
-        <a href="#">Отправить</a>
+        Отправить
       </div>
     </div>
-    <div>*Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных</div>
+    <div class="discount_text_2">*Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных</div>
   </div>
 </div>
