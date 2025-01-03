@@ -1,23 +1,23 @@
 import {Component} from '@angular/core';
 import {NgClass, NgOptimizedImage} from '@angular/common';
-import {YMapsComponent} from './ymaps/ymaps.component';
 import {interval} from 'rxjs';
 import {OurWorksComponent} from '../../components/our-works/our-works.component';
 import {DiscountComponent} from '../../components/discount/discount.component';
 import {CallUsComponent} from '../../components/call-us/call-us.component';
 import {ModalService} from '../../components/modal/modal.service';
 import {CallRequestComponent} from '../../components/call-request/call-request.component';
+import {ContactsComponent} from '../../components/contacts/contacts.component';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    YMapsComponent,
     NgClass,
     OurWorksComponent,
     DiscountComponent,
-    CallUsComponent
+    CallUsComponent,
+    ContactsComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss','../../commons/styles/buttons.scss','../../commons/styles/title.scss'],
