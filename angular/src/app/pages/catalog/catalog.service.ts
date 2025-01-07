@@ -16,13 +16,15 @@ export class CatalogService {
     this.urls.set('ukrm',{imageUrls:ukrmImages,title:'УСТРОЙСТВА КОМПЕНСАЦИИ РЕАКТИВНОЙ МОЩНОСТИ (УКРМ)'})
     this.urls.set('vru',{imageUrls:vruImages,title:'ВВОДНОЕ РАСПРЕДЕЛИТЕЛЬНОЕ УСТРОЙСТВО (ВРУ)'})
     this.urls.set('schun',{imageUrls:schunImages,title:'ШКАФЫ УПРАВЛЕНИЯ НАСОСАМИ (ШУН)'})
+    this.urls.set('all',{imageUrls:[],title:'ЗАКАЗЫВАЙТЕ НАПРЯМУЮ У ПРОИЗВОДИТЕЛЯ'})
   }
 
-
+  getCatalogItems():Map<string, CatalogItem>{
+    return this.urls
+  }
 
   getImagesUrls(path:string):Observable<CatalogItem>{
     const urls = this.urls.get(path)
-
     if(urls) return of(urls)
     return of({title:'',imageUrls:[]})
   }

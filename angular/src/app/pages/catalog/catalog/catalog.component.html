@@ -1,0 +1,14 @@
+<div class="main_catalog_box">
+  <div *ngFor="let item of catalogService.getCatalogItems() | keyvalue;">
+    <div class="mcb_item" *ngIf="item.key!=='all'">
+      <img ngSrc="{{item.value.imageUrls[0]}}" fill alt="">
+      <div class="mcb_block_text_hover">
+        <div class="mcb_text_hover">{{ item.value.title }}</div>
+        <div class="mcb_button_hover" routerLink="/catalog/{{item.key}}">Подробнее</div>
+      </div>
+      <div class="mcb_block_text">
+        <div class="mcb_text">{{ item.value.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>

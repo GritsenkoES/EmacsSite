@@ -6,7 +6,7 @@
     </div>
   </div>
 </div>
-<app-slider *ngIf="currentCatalogItem&&currentCatalogItem.imageUrls" [fullImageUrl]="currentCatalogItem.imageUrls"></app-slider>
+<app-slider *ngIf="currentCatalogItem&&currentCatalogItem.imageUrls.length>0" [fullImageUrl]="currentCatalogItem.imageUrls"></app-slider>
 <router-outlet></router-outlet>
 <app-our-works></app-our-works>
 <app-discount></app-discount>

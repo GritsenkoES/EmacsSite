@@ -1,0 +1,74 @@
+.main_catalog_box {
+  font-family: Inter, serif;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mcb_item{
+  position: relative;
+  display: flex;
+  align-items: end;
+  margin-bottom: 40px;
+  width: 600px;
+  height: 440px;
+  border-radius: 10px;
+  color: white;
+}
+.mcb_block_text {
+  width: 100%;
+  padding-left: 30px;
+  height: 100px;
+  font-family: Inter, serif;
+  font-size: 32px;
+  font-weight: 400;
+  background: #1939AB;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+img{
+  z-index: -1;
+}
+.mcb_item:hover {
+  cursor: pointer;
+  background: linear-gradient(rgba(15, 35, 109, 0.74), rgba(0, 0, 0, 0.8));
+  justify-content: center;
+}
+.mcb_item:hover > .mcb_block_text {
+  display: none;
+}
+
+.mcb_item:hover > .mcb_block_text_hover {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mcb_text_hover {
+  margin-top: 162px;
+  width: 371px;
+  color: white;
+  font-family: Inter, serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+.mcb_block_text_hover {
+  display: none;
+}
+.mcb_button_hover {
+  display: flex;
+  width: 186px;
+  height: 60px;
+  background: #2152FF;
+  border-radius: 14px;
+  color: white;
+  font-family: Inter, serif;
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+  cursor: pointer;
+}

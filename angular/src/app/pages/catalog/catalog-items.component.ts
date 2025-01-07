@@ -20,11 +20,11 @@ import {CallUsComponent} from '../../components/call-us/call-us.component';
     NgIf,
     CallUsComponent
   ],
-  templateUrl: './catalog.component.html',
+  templateUrl: './catalog-items.component.html',
   standalone: true,
   styleUrls: ['../../commons/styles/buttons.scss','../../commons/styles/catalog.scss','../../commons/styles/title.scss']
 })
-export class CatalogComponent implements OnInit{
+export class CatalogItemsComponent implements OnInit{
   currentCatalogItem:CatalogItem|undefined
   constructor(private router: Router,
               private catalogService: CatalogService,
