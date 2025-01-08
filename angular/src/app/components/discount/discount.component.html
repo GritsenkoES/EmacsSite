@@ -11,6 +11,7 @@
     </div>
   </div>
   <div class="discount_right">
+    <form [formGroup]="phoneForm">
     <input type="text" class="text-field__input discount_form_1" placeholder="Ваше имя">
     <input
       [disabled]="backRequestService.inputDisabled"
@@ -22,6 +23,7 @@
       [ngxPhoneFieldParams]="phoneInputParams.phoneInputParams()"
       [ngClass]="{error:(phoneValid===false)}"
     />
+    </form>
     <div class="discount_form_2" (click)="handleSubmit()">
       <div class="discount_text discount_text_5">
         Отправить
