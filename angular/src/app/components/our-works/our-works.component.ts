@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {OurWorksService} from './our-works.service';
-import {OurWorks, OurWorksContent} from '../../pages/main-page/types';
+import {OurWorksService} from '../../services/our-works.service';
+import {OurWorks, OurWorksContent} from '../../types/OurWorksTypes';
 import {NgForOf, NgOptimizedImage} from '@angular/common';
 
 @Component({

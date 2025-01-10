@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivationStart, NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {filter} from 'rxjs';
-import {CatalogItem, CatalogService} from './catalog.service';
+import {CatalogItem, CatalogService} from '../../services/catalog.service';
 import {SliderComponent} from '../../components/slider/slider.component';
 import {DiscountComponent} from '../../components/discount/discount.component';
 import {OurWorksComponent} from '../../components/our-works/our-works.component';

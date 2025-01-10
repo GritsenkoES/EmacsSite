@@ -7,7 +7,7 @@
     <div class="description_h3">
       <div class="description_rect"></div>
       <div class="description_vartext">
-        Разработка проектной и конструкторской документации
+        {{ourServices[currentService]}}
       </div>
     </div>
     <div class="buttons description_call" (click)="requestCallShow()">
@@ -29,42 +29,16 @@
   </div>
 </div>
 <div class="main_catalog_images">
-  <div class="main_catalog_brd">
+  <div class="main_catalog_brd" *ngFor="let item of catalogsItems| keyvalue">
     <div class="main_catalog_image">
-      <img ngSrc="img/UKRM.png" height="380" width="380" alt="">
+      <img ngSrc="{{item.value.imageUrls[0]}}" height="280" width="380" alt="">
     </div>
     <div class="main_catalog_text">
-      Устройства компенсации реактивной мощности (УКРМ)
+      {{item.value.title}}
     </div>
     <div class="main_go_catalog2">
       <div>
-        <a href="#">Перейти в каталог</a>
-      </div>
-    </div>
-  </div>
-  <div class="main_catalog_brd">
-    <div class="main_catalog_image">
-      <img ngSrc="img/SCHNO.png" height="380" width="380" alt="">
-    </div>
-    <div class="main_catalog_text">
-      Щиты наружного освещения (ЩНО)
-    </div>
-    <div class="main_go_catalog2">
-      <div>
-        <a href="#">Перейти в каталог</a>
-      </div>
-    </div>
-  </div>
-  <div class="main_catalog_brd">
-    <div class="main_catalog_image ">
-      <img ngSrc="img/SCHITP.png" height="380" width="379" alt="">
-    </div>
-    <div class="main_catalog_text">
-      Щиты индивидуального теплового пункта
-    </div>
-    <div class="main_go_catalog2">
-      <div>
-        <a href="#">Перейти в каталог</a>
+        <a routerLink="catalog/{{item.key}}">Перейти в каталог</a>
       </div>
     </div>
   </div>

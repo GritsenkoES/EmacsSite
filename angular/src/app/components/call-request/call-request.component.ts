@@ -3,8 +3,8 @@ import {SvgIconComponent} from 'angular-svg-icon';
 import {ModalComponent} from '../modal/modal.component';
 import {ModalBase} from '../modal/modal-base';
 import {ErrorMessage, MessagesService, SuccessMessage} from '../messages/messages.service';
-import {PhoneInputService} from '../phone-input.service';
-import {BackRequestService} from '../../commons/services/back-request.service';
+import {PhoneInputService} from '../../services/phone-input.service';
+import {BackRequestService} from '../../services/back-request.service';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgxPhoneField} from 'ngx-phone-field';
 import {NgClass} from '@angular/common';
@@ -21,7 +21,8 @@ import {Iti} from 'intl-tel-input';
     NgClass
   ],
   templateUrl: './call-request.component.html',
-  styleUrls: ['./call-request.component.scss','../../commons/styles/buttons.scss',]
+  standalone: true,
+  styleUrls: ['./call-request.component.scss', '../../commons/styles/buttons.scss',]
 })
 export class CallRequestComponent extends ModalBase{
   phoneForm = new FormGroup({

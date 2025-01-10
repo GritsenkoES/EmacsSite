@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {OurWorks, OurWorksContent} from '../../pages/main-page/types';
+import {OurWorks, OurWorksContent} from '../types/OurWorksTypes';
 import {Observable, of} from 'rxjs';
 
 @Injectable({

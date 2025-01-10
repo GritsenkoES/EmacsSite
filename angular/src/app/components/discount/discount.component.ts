@@ -4,8 +4,8 @@ import {NgxPhoneField} from "ngx-phone-field";
 import {Iti} from 'intl-tel-input';
 import {ErrorMessage, MessagesService, SuccessMessage} from '../messages/messages.service';
 import {NgClass} from '@angular/common';
-import {BackRequestService} from '../../commons/services/back-request.service';
-import {PhoneInputService} from '../phone-input.service';
+import {BackRequestService} from '../../services/back-request.service';
+import {PhoneInputService} from '../../services/phone-input.service';
 
 @Component({
   selector: 'app-discount',

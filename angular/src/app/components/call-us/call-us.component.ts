@@ -4,8 +4,8 @@ import {NgxPhoneField} from 'ngx-phone-field';
 import {Iti} from 'intl-tel-input';
 import {NgClass} from '@angular/common';
 import {ErrorMessage, MessagesService, SuccessMessage} from '../messages/messages.service';
-import {BackRequestService} from '../../commons/services/back-request.service';
-import {PhoneInputService} from '../phone-input.service';
+import {BackRequestService} from '../../services/back-request.service';
+import {PhoneInputService} from '../../services/phone-input.service';
 
 
 
@@ -13,6 +13,7 @@ import {PhoneInputService} from '../phone-input.service';
   selector: 'app-call-us',
   imports: [ReactiveFormsModule, NgxPhoneField, NgClass],
   templateUrl: './call-us.component.html',
+  standalone: true,
   styleUrl: './call-us.component.scss'
 })
 export class CallUsComponent{

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CatalogService} from '../catalog.service';
+import {CatalogService} from '../../../services/catalog.service';
 import {KeyValuePipe, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
 import {RouterLink} from '@angular/router';
 
@@ -13,6 +13,7 @@ import {RouterLink} from '@angular/router';
     NgIf
   ],
   templateUrl: './catalog.component.html',
+  standalone: true,
   styleUrl: './catalog.component.scss'
 })
 export class CatalogComponent {

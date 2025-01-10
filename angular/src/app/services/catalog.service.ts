@@ -1,11 +1,13 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class CatalogService {
-  urls:Map<string, CatalogItem>
+export class CatalogService{
+  private readonly urls:Map<string, CatalogItem>
+  private catalogItemsForMainPage: string[]=['ukrm','schno','itp']
 
   constructor() {
     this.urls = new Map<string, CatalogItem>();
@@ -28,6 +30,18 @@ export class CatalogService {
     if(urls) return of(urls)
     return of({title:'',imageUrls:[]})
   }
+
+  getCatalogsItemForMainPage():Observable<Map<string,CatalogItem>>{
+    const result = new Map<string, CatalogItem>();
+    for(let i=0; i<this.catalogItemsForMainPage.length; i++){
+      const url =this.catalogItemsForMainPage[i];
+      result.set(url,this.urls.get(url)!);
+    }
+    return of(result)
+  }
+
+
+
 }
 const avrImages:string[]=["img/catalog/avr/avr1.jpg","img/catalog/avr/avr_description_image2.png","img/catalog/avr/avr_description_image3.png"]
 const schnoImages:string[]=['img/catalog/schno/schno1.jpg','img/catalog/schno/schno2.jpg','img/catalog/schno/schno3.jpg'];
@@ -41,3 +55,4 @@ export interface CatalogItem{
   title:string;
   imageUrls:string[];
 }
+

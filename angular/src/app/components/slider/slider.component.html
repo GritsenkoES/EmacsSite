@@ -3,7 +3,11 @@
     <img ngSrc="{{fullImageUrl()[bigImageUrl]}}" width="90%" height="660" alt="">
   </div>
   <div class="images_list">
-    <div *ngFor="let image of fullImageUrl();let  i = index" [ngClass]="{active:i===bigImageUrl}">
+    <div *ngFor="let image of fullImageUrl();let
+    i = index"
+         class="image"
+         [ngClass]="{active:i===bigImageUrl}"
+         (click)="selectImage(i)">
       <img ngSrc="{{image}}" width="305" height="200" alt="">
     </div>
   </div>

@@ -15,18 +15,25 @@ import {interval} from 'rxjs';
 })
 export class SliderComponent {
   bigImageUrl:number=0;
+  changed:boolean = false;
   fullImageUrl=input.required<string[]>();
   constructor() {
     interval(3000).subscribe({
       next: () => {
+        if(this.changed) return
         if(this.bigImageUrl===this.fullImageUrl().length-1){
           this.bigImageUrl=0
-          console.log(this.bigImageUrl)
+          this.changed=false
         }else {
           this.bigImageUrl=this.bigImageUrl+1;
-          console.log(this.bigImageUrl)
+          this.changed=false
         }
       }}
     )
+  }
+
+  selectImage(i: number) {
+    this.changed=true;
+    this.bigImageUrl=i
   }
 }
