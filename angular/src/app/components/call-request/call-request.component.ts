@@ -38,6 +38,7 @@ export class CallRequestComponent extends ModalBase{
   }
   handleSubmit() {
     const phone = this.phoneForm.get('phone')?.value;
+    console.log(phone);
     this.phoneValid = phone?.isValidNumber()
     if (this.phoneValid === true) {
       const successMessage = new SuccessMessage("Запрос отправлен")

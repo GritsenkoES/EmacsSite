@@ -9,7 +9,7 @@
 <div class="work_list">
   <div class="our_works" *ngFor="let currentOurWork of ourWorks.content">
   <div class="our_works_main_image">
-    <img ngSrc="{{currentOurWork.mainImage}}" fill alt="">
+    <img ngSrc="{{currentOurWork.mainImage}}" fill alt="" priority>
   </div>
   <div class="our_works_right" >
     <div class="our_works_text_h1">
@@ -22,7 +22,7 @@
       <div class="our_works_contur">
         <div class="our_works_second_images">
           <div *ngFor="let item of currentOurWork?.imagesSrc" class="our_works_main_image_item" (click)="changeMainImage(currentOurWork,item)">
-            <img ngSrc="{{item}}" width="143" height="131" alt="">
+            <img ngSrc="{{item}}" width="143" height="131" alt="" priority>
           </div>
         </div>
       </div>
