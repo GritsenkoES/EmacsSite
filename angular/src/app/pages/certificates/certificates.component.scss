@@ -1,0 +1,29 @@
+.container{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.image{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.image-list{
+  border: 1px solid cornflowerblue;
+  border-radius: 2px;
+  padding: 1rem;
+  height: 600px;
+  overflow: scroll;
+}
+.small_image:hover{
+  cursor: pointer;
+}
+.active{
+  border:1px solid #2152FF;
+  padding: 2px;
+}

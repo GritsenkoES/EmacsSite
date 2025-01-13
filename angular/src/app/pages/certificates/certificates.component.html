@@ -1,2 +1,20 @@
+<div class="catalog_title">
+  <div class="catalog_title_text">Сертификаты</div>
+  <div class="buttons" (click)="requestCallShow()">
+    <div>
+      Оставить заявку
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="image">
+    <img ngSrc="{{urls[currentUrl]}}" width="450" height="600">
+  </div>
+  <div class="image-list">
+    <div class="small_image" *ngFor="let url of urls; let i=index" [ngClass]="{active:currentUrl===i}">
+      <img ngSrc="{{url}}" width="100" height="140">
+    </div>
+  </div>
+</div>
 <app-call-us></app-call-us>
 <app-our-works></app-our-works>
