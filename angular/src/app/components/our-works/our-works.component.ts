@@ -2,12 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {OurWorksService} from '../../services/our-works.service';
 import {OurWorks, OurWorksContent} from '../../types/OurWorksTypes';
 import {NgForOf, NgOptimizedImage} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-our-works',
   imports: [
     NgOptimizedImage,
-    NgForOf
+    NgForOf,
+    RouterLink
   ],
   templateUrl: './our-works.component.html',
   standalone: true,

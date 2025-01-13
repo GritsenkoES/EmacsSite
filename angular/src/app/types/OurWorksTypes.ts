@@ -3,5 +3,6 @@ export interface OurWorksContent {
 }
 export interface OurWorks {
   title: string;
+  mainImage: string;
   imagesSrc: string[];
 }

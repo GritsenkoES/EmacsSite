@@ -1,0 +1,34 @@
+<div class="catalog_title">
+  <div class="catalog_title_text">Наши работы</div>
+  <div class="buttons" (click)="requestCallShow()">
+    <div>
+      Оставить заявку
+    </div>
+  </div>
+</div>
+<div class="work_list">
+  <div class="our_works" *ngFor="let currentOurWork of ourWorks.content">
+  <div class="our_works_main_image">
+    <img ngSrc="{{currentOurWork.mainImage}}" fill alt="">
+  </div>
+  <div class="our_works_right" >
+    <div class="our_works_text_h1">
+      Главные распределительные щиты
+    </div>
+    <div class="our_works_description">
+      <div class="our_works_text_h2">
+        {{currentOurWork?.title}}
+      </div>
+      <div class="our_works_contur">
+        <div class="our_works_second_images">
+          <div *ngFor="let item of currentOurWork?.imagesSrc" class="our_works_main_image_item" (click)="changeMainImage(currentOurWork,item)">
+            <img ngSrc="{{item}}" width="143" height="131" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<app-call-us></app-call-us>
+<app-discount></app-discount>

@@ -5,12 +5,17 @@
 }
 
 .header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   height: 130px;
   align-items: center;
   white-space:nowrap;
+  background: white;
+  border-bottom: 1px solid #D8D8D8;
 }
 
 .header_logo {
@@ -129,11 +134,3 @@
   cursor: pointer;
 }
 
-
-.under_header_line {
-  border: none; /* Убираем границу */
-  margin: 0;
-  background-color: #D8D8D8; /* Цвет линии */
-  color: #D8D8D8; /* Цвет линии для IE6-7 */
-  height: 1px; /* Толщина линии */
-}

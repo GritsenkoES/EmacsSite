@@ -33,7 +33,6 @@ export class MainPageComponent implements OnInit{
   currentDiv: number = 1;
   currentService:number=0;
   ourServices:string[]=[];
-
   constructor(private modalService:ModalService,
               private catalogService: CatalogService,
               private mainPageService: MainPageService) {
