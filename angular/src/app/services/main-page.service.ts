@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {HttpApi} from './HttpApi';
+import {AllOurServicesDto} from '../types/Dto';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainPageService {
-  private ourServices:string[]=[
-    'Разработка проектной и конструкторской документации',
-    'Согласование проектной и конструкторской документации',
-    'Производство и поставка щитового оборудования',
-    'Производство и поставка насосных станций',
-    'Монтажные и пусконаладочные работы',
-    'Лабораторные испытания электроустановок'
-  ]
-  getOurServices():Observable<string[]>{
-    return of(this.ourServices)
+  constructor(private http: HttpClient, private api:HttpApi)  {
+  }
+  getOurServices():Observable<AllOurServicesDto>{
+    return this.http.get<AllOurServicesDto>(this.api.getAllServiceApi())
   }
 }

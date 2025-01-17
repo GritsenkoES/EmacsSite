@@ -55,8 +55,8 @@ export class MainPageComponent implements OnInit{
     this.catalogService.getCatalogsItemForMainPage().subscribe(catalogItems => {
       this.catalogsItems = catalogItems;
     })
-    this.mainPageService.getOurServices().subscribe(services => {
-      this.ourServices = services;
+    this.mainPageService.getOurServices().subscribe(dto => {
+      return this.ourServices = dto.services.map((ser) => ser.title);
     })
   }
   requestCallShow() {
