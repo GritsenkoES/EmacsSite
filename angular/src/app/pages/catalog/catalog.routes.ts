@@ -22,7 +22,8 @@ export const CATALOG_ROUTES: Routes = [
       {path:'itp',component:ItpComponent},
       {path:'ukrm',component:UkrmComponent},
       {path:'vru',component:VruComponent},
-      {path:'schun',component:SchunComponent}
+      {path:'schun',component:SchunComponent},
+      {path:'**',redirectTo:'all',pathMatch:'full'}
     ]
   }
 ]

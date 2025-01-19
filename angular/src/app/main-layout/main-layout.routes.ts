@@ -14,7 +14,8 @@ export const MAIN_ROUTES: Routes = [
       {path:'catalog',loadChildren:() => import('./../pages/catalog/catalog.routes').then(m => m.CATALOG_ROUTES)},
       {path:'contacts',component:ContactsPageComponent},
       {path:'certificates',component:CertificatesComponent},
-      {path:'works', component:OurWorksPageComponent}
+      {path:'works', component:OurWorksPageComponent},
+      {path:'**', redirectTo:'',pathMatch:'full'}
     ]
   }
 ]
