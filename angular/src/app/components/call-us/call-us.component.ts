@@ -30,13 +30,24 @@ export class CallUsComponent{
     console.log(phone); // Iti instance
     this.phoneValid = phone?.isValidNumber()
     if(this.phoneValid===true){
-      const successMessage= new SuccessMessage("Запрос отправлен")
-      this.messageService.addMessage(successMessage)
+      const value:string = phone?.getNumber().replace("+","")!!!
+      this.sendRequest(value)
     }else {
       const errorMessage= new ErrorMessage("Не валидный номер телефона")
       this.messageService.addMessage(errorMessage)
     }
   }
-
+  sendRequest(phone:string){
+    this.backRequestService.sendCallRequest(null,phone,null).subscribe({next: response=>{
+      if(response.httpStatus===200){
+        const successMessage= new SuccessMessage(response.message)
+        this.messageService.addMessage(successMessage)
+      }else {
+        const errorMessage= new ErrorMessage(response.message)
+        this.messageService.addMessage(errorMessage)
+      }
+      this.phoneForm.reset();
+      }})
+  }
 
 }

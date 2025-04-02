@@ -5,10 +5,14 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class HttpApi extends RootApi{
-  protocol: string='https';
+  protocol: string='http';
   services: string = 'services'
+  calling:string ='callings'
 
   getAllServiceApi():string{
     return this.getRoot()+'/'+this.services+'/';
+  }
+  getCallingApi():string{
+    return this.getRoot()+'/'+this.calling+'/';
   }
 }
