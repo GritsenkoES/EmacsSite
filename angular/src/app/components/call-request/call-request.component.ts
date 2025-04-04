@@ -38,14 +38,35 @@ export class CallRequestComponent extends ModalBase{
   }
   handleSubmit() {
     const phone = this.phoneForm.get('phone')?.value;
-    console.log(phone);
     this.phoneValid = phone?.isValidNumber()
-    if (this.phoneValid === true) {
-      const successMessage = new SuccessMessage("Запрос отправлен")
-      this.messageService.addMessage(successMessage)
-    } else {
-      const errorMessage = new ErrorMessage("Не валидный номер телефона")
+    let value: string|null =null
+    if(this.phoneValid===true) {
+     value = phone?.getNumber().replace("+", "")!!!
+    }else {
+      const errorMessage = new ErrorMessage("Невалидный номер телефона")
       this.messageService.addMessage(errorMessage)
+      return;
     }
+    if(!this.phoneForm.get('name')?.valid){
+      const errorMessage = new ErrorMessage("Заполните пожалуйста Ваше имя")
+      this.messageService.addMessage(errorMessage)
+      return
+    }
+    const name:string = this.phoneForm.get('name')?.value!!;
+    const comment = this.phoneForm.get('comment')?.value;
+    this.sendRequest(name,value!!,comment!!)
+  }
+  sendRequest(name:string,phone:string, comment:string|null){
+    this.backRequestService.sendCallRequest(name,phone,comment).subscribe({next: response=>{
+        if(response.httpStatus===200){
+          const successMessage= new SuccessMessage(response.message)
+          this.messageService.addMessage(successMessage)
+        }else {
+          const errorMessage= new ErrorMessage(response.message)
+          this.messageService.addMessage(errorMessage)
+        }
+        this.phoneForm.reset();
+        super.closeModal()
+      }})
   }
 }

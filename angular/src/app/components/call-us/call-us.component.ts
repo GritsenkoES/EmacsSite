@@ -27,7 +27,6 @@ export class CallUsComponent{
   }
   handleSubmit() {
     const phone = this.phoneForm.get('phone')?.value;
-    console.log(phone); // Iti instance
     this.phoneValid = phone?.isValidNumber()
     if(this.phoneValid===true){
       const value:string = phone?.getNumber().replace("+","")!!!

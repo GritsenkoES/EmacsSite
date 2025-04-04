@@ -12,7 +12,10 @@
   </div>
   <div class="discount_right">
     <form [formGroup]="phoneForm">
-    <input type="text" class="text-field__input discount_form_1" placeholder="Ваше имя">
+    <input type="text"
+           formControlName="name"
+           class="text-field__input discount_form_1"
+           placeholder="Ваше имя">
     <input
       [disabled]="backRequestService.inputDisabled"
       class="text-field__input discount_form_1"
