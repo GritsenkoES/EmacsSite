@@ -1,7 +1,6 @@
 export abstract class RootApi{
   abstract protocol:string;
-  //private host:string='80.78.243.81';
-  private host:string="localhost:8080"
+  private host:string='80.78.243.81';
   private app_prefix:string='application';
   private api_version:string='api/v1';
   private zone:string='site'
